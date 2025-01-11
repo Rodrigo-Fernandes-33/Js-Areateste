@@ -3,15 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>DOM</title>
+    <style>
+        body {
+            background-color: azure;
+            color: rgb(10, 10, 10);
+            font-family: Arial, Helvetica, sans-serif;
+
+        }
+    </style>
 </head>
 <body>
-    
+    <h1>Iniciando atividades com DOM</h1>
+    <p>Aqui vai o resultado</p>
+    <p>Aprendendo a usar o <strong>DOM</strong> em JavaScript.</p>
+    <div id = "msg"> Clique em mim</div>
+
+    <p>Tudo dentro do JavaScript esta dentro do window o qual tem location, document, history e outros <br>Dentro de document temos o HTML e dentro de HTML temos head e body </p>
+
 
     <script>
-var nome = window.prompt('Qual é o seu Nome?')
-document.write (`Olá, <strong>${nome}</strong>,Seu nome tem ${nome.length} tantas letras`)
+        var corpo = window.document.body
+        var p1 = window.document.getElementsByTagName('p')[0]
+        var d = window.document.getElementById("msg")
+        /*
+        d.style.background = 'green'
+        d.innerText = 'Estou aguardando...'
+        */
 
+        var d = window.document.getElementById("msg")
+        d.innerText = 'Olá!'
+       d.style.color = 'red'
     </script>
 </body>
 </html>
